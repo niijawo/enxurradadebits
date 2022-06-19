@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Atividade</title>
+	<style>
+
+        main{
+            padding: 20px;
+            background-color: cornflowerblue;
+            border: 2px solid black;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        section{
+            height: 200px;
+        }
+
+        article{
+            text-align: justify;
+            padding-left: 10px;
+        }
+
+        p{
+            text-indent: 15px;
+            font-size: 14pt;
+        }
+
+        /*Area de estilização do exercicio 1*/
+        .amanhecer{
+            background-color: blue;
+            position: relative;
+            transition: 2s;
+            padding-top: 140px;
+            box-sizing: border-box;
+        }
+
+        .sol{
+            margin-left: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background-color: white;
+        }
+
+        /*apague o comentário e adicione o pseudo elemento correto*/
+        .amanhecer/*Atividade 1: adicione o pseudo elemento aqui*/{
+            background-color: aqua;
+            padding-top: 20px;
+        }
+
+        .amanhecer:hover{
+            background-image: linear-gradient(180deg,orange,red);
+        }
+
+        /*Area de estilização do exercicio 2*/
+        .animacao-quicar{
+            background-color: green;
+            height: 200px;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .bolinha{
+            height: 100px;
+            width: 100px;
+            margin-top: 100px;
+            margin-left: 10px;
+            border-radius: 100%;
+            background-color: red;
+            position: absolute;
+            animation: quicar 2s normal infinite
+        }
+
+        @keyframes quicar{
+            50%{
+                transform: translate(0,-100px); 
+            }
+        }
+
+        /*Area de estilização da atividade 3*/
+        .animacao-estrelas{
+            background-image: linear-gradient(0, #120c56, #000000);
+        }
+
+        .stars{
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            box-shadow: 50px 30px white,
+            100px 80px white,
+            80px 120px white,
+            300px 20px white,
+            250px 130px white,
+            200px 50px white,
+            150px 100px white,
+            500px 80px white,
+            600px 120px white,
+            800px 20px white,
+            450px 130px white,
+            900px 50px white,
+            650px 100px white,
+            200px 10px white,
+            150px 5px white,
+            500px 30px white,
+            600px 150px white,
+            800px 50px white,
+            450px 200px white,
+            900px 40px white,
+            650px 70px white,
+            520px 100px white;
+            display: none;
+            animation: anim-stars 10s linear infinite;
+        }
+
+        @keyframes anim-stars {
+            from {
+                transform: translateY(0px);
+            }
+            to {
+                transform: translateY(150px);
+            }
+        }
+        
+        .animacao-estrelas:active .stars{
+            display: block;
+        }
+	</style>
+</head>
+<body>
+    <main>
+        <h1>Atividade sobre animações e pseudo elementos</h1>
+        
+        <article>
+            <h2>Atividade 1</h2>
+            <p>A seção abaixo deve simbolizar um amanhecer, que deve acontecer quando o usuário passar o mouse por cima da seção. Para que isso acontessa edite o arquivo e adicione o evento correto.</p>
+        </article>
+        <section class="amanhecer">
+            <div class="area-amanhecer">
+                <div class="sol"></div>
+            </div>
+        </section>
+        <article>
+            <h2>Atividade 2</h2>
+            <p>A seção abaixo contém a animação de uma bolinha que deve ficar quicando de 1 em 1 segundo.</p>
+            <p>Você deve adicionar a propriedade 'animation', informando: 1 - o nome do quadro do evento(quicar), 2 - o tempo de duração do evento, 3 - a função linear, 4 - a quantidade de vezes que deve ocorrer, dica: deve ocorrer infinitamente.</p>
+        </article>
+        <section class="animacao-quicar">
+            <div class="bolinha"></div>
+        </section>
+        <article>
+            <h2>Atividade 3</h2>
+            <p>A seção abaixo, contém a animação de estrelas, se movimentando pelo céu. Você deve adicionar o pseudo elemento correto, para que as estrelas apareçam na tela, quando o usuário clicar na seção.</p>
+        </article>
+        <section class="animacao-estrelas">
+            <div class="stars"></div>
+        </section>
+    </main>
+</body>
+</html>
